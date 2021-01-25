@@ -7,11 +7,11 @@ import (
 )
 
 type Config struct {
-	Host         string        `long:"host" env:"HOST" default:"0.0.0.0" description:"The host for the service"`
-	Port         int           `long:"port" env:"PORT" default:"8080" description:"The port the collector service is listening on"`
-	WriteTimeout int         `long:"write_timeout" env:"WRITE_TIMEOUT" default:"15" description:"The server WriteTimeout"`
-	ReadTimeout  int `long:"read_timeout" env:"READ_TIMEOUT" default:"15" description:"The server ReadTimeout"`
-	IdleTimeout  int `long:"idle_timeout" env:"IDLE_TIMEOUT" default:"15" description:"The server IdleTimeout"`
+	Host         string `long:"host" env:"HOST" default:"0.0.0.0" description:"The host for the service"`
+	Port         int    `long:"port" env:"PORT" default:"8080" description:"The port the collector service is listening on"`
+	WriteTimeout int    `long:"write_timeout" env:"WRITE_TIMEOUT" default:"15" description:"The server WriteTimeout"`
+	ReadTimeout  int    `long:"read_timeout" env:"READ_TIMEOUT" default:"15" description:"The server ReadTimeout"`
+	IdleTimeout  int    `long:"idle_timeout" env:"IDLE_TIMEOUT" default:"15" description:"The server IdleTimeout"`
 }
 
 func NewConfig() (*Config, error) {

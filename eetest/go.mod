@@ -1,4 +1,4 @@
-module github.com/eetest.git
+module saul/eetest.git
 
 go 1.15
 

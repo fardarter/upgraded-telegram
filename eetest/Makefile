@@ -2,14 +2,13 @@
 BINARY_NAME=eetest
 
 REPO_NAME=eetestproject
-REPO=registry.foo.com/foo/repos/rp/eetestproject
+REPO=registry.github.com/eetest
 BUILD_TIME=$(shell date -u +"%FT%TZ")
 ifndef HASH_FROM_DOCKER
 GIT_HASH=$(shell git rev-parse HEAD)
 else
 GIT_HASH=${HASH_FROM_DOCKER}
 endif
-
 
 .PHONY: run
 run:
@@ -34,17 +33,20 @@ linux:
 test:
 	go test ./... -cover -coverprofile coverage.out -race -mod=vendor -v
 
-.PHONY: build-docker
-build-docker:
-	docker build --build-arg GIT_HASH=${GIT_HASH} -t ${REPO} .
+.PHONY: docker
+docker:
+	docker build --build-arg GIT_HASH=${GIT_HASH} -t ${REPO}/$(BINARY_NAME) .
+
+docker-run:
+	docker run --rm --name $(BINARY_NAME) -p 5599:8080 $(REPO)/$(BINARY_NAME)
 
 .PHONY: lint
 lint:
 	docker run \
 		--rm \
 		-it \
-		-w /go/src/repos/RP/${REPO_NAME}.git \
-		-v $(shell pwd):/go/src/repos/RP/${REPO_NAME}.git \
+		-w /go/src/repos/${REPO_NAME}.git \
+		-v $(shell pwd):/go/src/repos/${REPO_NAME}.git \
 		golangci/golangci-lint:v1.22 \
 		golangci-lint run \
 			-v \

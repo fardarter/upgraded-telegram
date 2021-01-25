@@ -9,7 +9,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/eetest.git/pkg/config"
+	"saul/eetest.git/pkg/config"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
 )
@@ -29,7 +29,8 @@ func main() {
 		log.Fatal("Could not load config")
 	}
 	wait := parseWait()
-	getServer(conf, wait, getMux())
+	r := mux.NewRouter()
+	getServer(conf, wait, getMux(r))
 
 }
 
@@ -69,7 +70,11 @@ func getServer(conf *config.Config, wait time.Duration, r *mux.Router) {
 	defer cancel()
 	// Doesn't block if no connections, but will otherwise wait
 	// until the timeout deadline.
-	srv.Shutdown(ctx)
+	shutdownErr := srv.Shutdown(ctx)
+	if shutdownErr != nil {
+		log.Fatal("Could not shut down server")
+		os.Exit(0)
+	}
 	// Optionally, you could run srv.Shutdown in a goroutine and block on
 	// <-ctx.Done() if your application should wait for other services
 	// to finalize based on context cancellation.
@@ -77,14 +82,20 @@ func getServer(conf *config.Config, wait time.Duration, r *mux.Router) {
 	os.Exit(0)
 }
 
-func getMux() *mux.Router {
-	r := mux.NewRouter()
-	r.HandleFunc("/", Home)
-	http.Handle("/", r)
-	return r
+func getMux(mux *mux.Router) *mux.Router {
+	mux.HandleFunc("/", home).Methods(http.MethodGet)
+	http.Handle("/", mux)
+	return mux
 }
 
-func Home(rw http.ResponseWriter, r *http.Request) {
+func home(rw http.ResponseWriter, r *http.Request) {
+	rw.Header().Set("Access-Control-Allow-Origin", "*")
+	if r.Method == http.MethodOptions {
+		return
+	}
 	rw.WriteHeader(http.StatusOK)
-	fmt.Fprintf(rw, "Hello World!")
+	_, err := rw.Write([]byte("Hello World!"))
+	if err != nil {
+		log.Info("Something went wrong writing text to repose: %v", err)
+	}
 }

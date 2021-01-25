@@ -36,7 +36,6 @@ func Test_RetrievesConfigFromFlagsWithError(t *testing.T) {
 	require.NotNil(t, err)
 }
 
-
 func Test_RetrievesConfigFromEnvironmentVariable(t *testing.T) {
 	// Arrange
 	oldArgs := os.Args
