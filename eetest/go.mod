@@ -1,5 +1,10 @@
-module gitlab.com/entersekt/repos/random/eetest.git
+module github.com/eetest.git
 
 go 1.15
 
-require github.com/sirupsen/logrus v1.7.0
+require (
+	github.com/gorilla/mux v1.8.0
+	github.com/jessevdk/go-flags v1.4.0
+	github.com/sirupsen/logrus v1.7.0
+	github.com/stretchr/testify v1.2.2
+)

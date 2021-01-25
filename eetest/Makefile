@@ -57,4 +57,4 @@ vendor:
 
 .PHONY: gofmt
 gofmt:
-	gofmt -l -s -w ./pkg ./cmdTt
+	gofmt -l -s -w ./pkg ./cmd
