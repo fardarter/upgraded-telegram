@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eaf63d3f-9ba2-4eb2-bfe1-d9924ef6e46a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/lib/go-1.15" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1nXnL3bBY10Nw2EY7JxVHBDq03q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/eetest/chart/eetest" />
+      <recent name="$PROJECT_DIR$/eetest/pkg/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.Test_RetrievesConfigFromFlagsWithError in github.com/eetest.git/pkg/config">
+    <configuration name="Test_RetrievesConfigFromEnvironmentVariable in github.com/eetest.git/pkg/config" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="upgraded-telegram" />
+      <working_directory value="$PROJECT_DIR$/eetest/pkg/config" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/eetest.git/pkg/config" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_RetrievesConfigFromEnvironmentVariable\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_RetrievesConfigFromFlags in github.com/eetest.git/pkg/config" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="upgraded-telegram" />
+      <working_directory value="$PROJECT_DIR$/eetest/pkg/config" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/eetest.git/pkg/config" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_RetrievesConfigFromFlags\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_RetrievesConfigFromFlagsWithError in github.com/eetest.git/pkg/config" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="upgraded-telegram" />
+      <working_directory value="$PROJECT_DIR$/eetest/pkg/config" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/eetest.git/pkg/config" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_RetrievesConfigFromFlagsWithError\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.Test_RetrievesConfigFromFlagsWithError in github.com/eetest.git/pkg/config" />
+        <item itemvalue="Go Test.Test_RetrievesConfigFromEnvironmentVariable in github.com/eetest.git/pkg/config" />
+        <item itemvalue="Go Test.Test_RetrievesConfigFromFlags in github.com/eetest.git/pkg/config" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.helmignore" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3503" y="1037" width="664" height="244" key="#Go_Linter" timestamp="1611549628136">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state x="3503" y="1037" width="664" height="244" key="#Go_Linter/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611549628136" />
+    <state x="3548" y="961" width="573" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611554076780">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state x="3548" y="961" width="573" height="396" key="#com.intellij.fileTypes.FileTypeChooser/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611554076780" />
+    <state width="2514" height="683" key="GridCell.Tab.0.bottom" timestamp="1611551256915">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state width="2514" height="683" key="GridCell.Tab.0.bottom/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611551256915" />
+    <state width="2514" height="683" key="GridCell.Tab.0.center" timestamp="1611551256915">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state width="2514" height="683" key="GridCell.Tab.0.center/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611551256915" />
+    <state width="2514" height="683" key="GridCell.Tab.0.left" timestamp="1611551256914">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state width="2514" height="683" key="GridCell.Tab.0.left/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611551256914" />
+    <state width="2514" height="683" key="GridCell.Tab.0.right" timestamp="1611551256915">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state width="2514" height="683" key="GridCell.Tab.0.right/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611551256915" />
+    <state x="3329" y="794" key="SettingsEditor" timestamp="1611547380801">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state x="3329" y="794" key="SettingsEditor/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611547380801" />
+    <state x="3531" y="898" width="618" height="522" key="find.popup" timestamp="1611554140469">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state x="3531" y="898" width="618" height="522" key="find.popup/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611554140469" />
+    <state x="3503" y="767" width="672" height="678" key="search.everywhere.popup" timestamp="1611557883396">
+      <screen x="2560" y="440" width="2560" height="1440" />
+    </state>
+    <state x="3503" y="767" width="672" height="678" key="search.everywhere.popup/640.1440.1920.1080/707.0.1853.1440/2560.440.2560.1440@2560.440.2560.1440" timestamp="1611557883396" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/eetest/pkg/config/config.go</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
