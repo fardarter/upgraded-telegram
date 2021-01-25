@@ -1,0 +1,21 @@
+#replicaCount: 1
+
+image:
+  repository: registry.github.com/eetest/eetest
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 443
+
+ingress:
+  enabled: true
+  host: eetest.testdomain.com
+
+
+
