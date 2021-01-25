@@ -1,8 +1,11 @@
 
 BINARY_NAME=eetest
-
+NAMESPACE=eetest
+RELEASE=eetest
 REPO_NAME=eetestproject
 REPO=registry.github.com/eetest
+ROOT=.
+CHART=$(ROOT)/chart/eetest
 BUILD_TIME=$(shell date -u +"%FT%TZ")
 ifndef HASH_FROM_DOCKER
 GIT_HASH=$(shell git rev-parse HEAD)
@@ -60,3 +63,25 @@ vendor:
 .PHONY: gofmt
 gofmt:
 	gofmt -l -s -w ./pkg ./cmd
+
+.PHONY: create-default-namespace
+create-default-namespace:
+	kubectl create namespace $(NAMESPACE);
+
+.PHONY: helm-default-delete
+helm-default-delete:
+	helm del --purge $(RELEASE); \
+	kubectl delete namespaces --ignore-not-found=true $(NAMESPACE)
+
+
+.PHONY: helm-deploy
+helm-deploy: helm-default-delete create-default-namespace
+	helm install $(CHART) \
+		--name $(RELEASE) \
+		--namespace $(NAMESPACE)
+
+.PHONY: helm-upgrade
+helm-upgrade:
+	helm upgrade $(RELEASE) $(CHART) \
+		--install \
+		--namespace $(NAMESPACE)

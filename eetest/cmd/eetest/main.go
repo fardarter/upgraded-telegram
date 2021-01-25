@@ -9,9 +9,10 @@ import (
 	"os/signal"
 	"time"
 
-	"saul/eetest.git/pkg/config"
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
+	"saul/eetest.git/pkg/config"
 )
 
 var (
@@ -20,6 +21,10 @@ var (
 )
 
 var log = logrus.WithField("ctx", "main")
+
+func loggingMiddleware(next http.Handler) http.Handler {
+	return handlers.LoggingHandler(os.Stdout, next)
+}
 
 func main() {
 	log.Info(buildTime)
@@ -30,6 +35,7 @@ func main() {
 	}
 	wait := parseWait()
 	r := mux.NewRouter()
+	r.Use(loggingMiddleware)
 	getServer(conf, wait, getMux(r))
 
 }
@@ -96,6 +102,6 @@ func home(rw http.ResponseWriter, r *http.Request) {
 	rw.WriteHeader(http.StatusOK)
 	_, err := rw.Write([]byte("Hello World!"))
 	if err != nil {
-		log.Info("Something went wrong writing text to repose: %v", err)
+		log.Info("Something went wrong writing text to respose: %v", err)
 	}
 }
