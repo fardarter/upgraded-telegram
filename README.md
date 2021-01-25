@@ -6,6 +6,8 @@
 - go 1.15.6  
 - make 4.1  
  
+Project is contained in the `eetest folder`. 
+ 
 ## Minikube
 
 Add the following to enable the [nginx ingress controller](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/):
