@@ -6,7 +6,7 @@
 - go 1.15.6  
 - make 4.1  
  
-Project is contained in the `eetest folder`. 
+Project (including utilties) is contained in the `eetest` folder. 
  
 ## Minikube
 
